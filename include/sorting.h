@@ -8,36 +8,41 @@
 #include <iostream>
 #include <stdio.h>
 
+typedef unsigned int uint;
+
 class sorting {
 public:
 
-    int iarr;
-    float farr;
+    int* iarr;
+    uint len;
+    // float farr;
     /**
      *\brief class containing various sorting algorithms
      * \note constructor for sorting array of ints
      * @param arr array of integers to be sorted
      */
-    sorting(int arr[]);
+    sorting(int* pArr, uint nLen);
+
+    ~sorting(void);
 
     /**
      * \note constructor for sorting floats
      * @param arr array of floats to be sorted
      */
-    sorting(float arr[]);
+    // sorting(float arr[]);
 
-    void BubbleSort(int arr[], int len_arr);
+    void BubbleSort(void);
 
-    void PrintArray(int arr[], int len_arr);
+    void PrintArray(void);
 
-    void PrintArray(float arr[], int len_arr);
+    // void PrintArray(float arr[], int len_arr);
 
 
 private:
 
-    void swap(int *a, int *b);
+    void swap(uint a, uint b);
 
-    void swap(float *a, float *b);
+    // void swap(float *a, float *b);
 
 
 };
