@@ -10,6 +10,9 @@
 
 class sorting {
 public:
+
+    int iarr;
+    float farr;
     /**
      *\brief class containing various sorting algorithms
      * \note constructor for sorting array of ints
@@ -23,7 +26,20 @@ public:
      */
     sorting(float arr[]);
 
-    void BubbleSort
+    void BubbleSort();
+
+    void PrintArray(int arr[], int len_arr);
+
+    void PrintArray(float arr[], int len_arr);
+
+
+private:
+
+    void swap(int *a, int *b);
+
+    void swap(float *a, float *b);
+
+
 };
 
 #endif //ALGORITHMS_SORTING_H

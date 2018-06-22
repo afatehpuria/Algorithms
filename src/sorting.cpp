@@ -3,7 +3,7 @@
 //
 
 #include "../include/sorting.h"
-<<<<<<< HEAD
+
 
 sorting::sorting(int array[]) {
     iarr = *array;
@@ -57,5 +57,3 @@ void sorting::BubbleSort(int arr[], int len_arr) {
         }
     }
 }
-=======
->>>>>>> f16434ccb6318cd3abee2e64b8ff955a21e1e412
