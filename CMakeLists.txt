@@ -3,4 +3,4 @@ project(Algorithms)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Algorithms main.cpp src/sorting.cpp src/sorting.h)
+add_executable(Algorithms main.cpp src/sorting.cpp include/sorting.h)
