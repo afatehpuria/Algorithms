@@ -82,13 +82,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/Loaner/CLionProjects/Algorithms/include/sorting.h">
+			<Option target="Algorithms"/>
+		</Unit>
 		<Unit filename="/Users/Loaner/CLionProjects/Algorithms/main.cpp">
 			<Option target="Algorithms"/>
 		</Unit>
 		<Unit filename="/Users/Loaner/CLionProjects/Algorithms/src/sorting.cpp">
-			<Option target="Algorithms"/>
-		</Unit>
-		<Unit filename="/Users/Loaner/CLionProjects/Algorithms/src/sorting.h">
 			<Option target="Algorithms"/>
 		</Unit>
 		<Unit filename="/Users/Loaner/CLionProjects/Algorithms/CMakeLists.txt">

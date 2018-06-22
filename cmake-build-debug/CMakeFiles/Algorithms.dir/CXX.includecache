@@ -6,13 +6,19 @@
 
 #IncludeRegexTransform: 
 
+/Users/Loaner/CLionProjects/Algorithms/include/sorting.h
+iostream
+-
+stdio.h
+-
+
 /Users/Loaner/CLionProjects/Algorithms/main.cpp
 iostream
 -
+include/sorting.h
+/Users/Loaner/CLionProjects/Algorithms/include/sorting.h
 
 /Users/Loaner/CLionProjects/Algorithms/src/sorting.cpp
-sorting.h
-/Users/Loaner/CLionProjects/Algorithms/src/sorting.h
-
-/Users/Loaner/CLionProjects/Algorithms/src/sorting.h
+../include/sorting.h
+/Users/Loaner/CLionProjects/Algorithms/include/sorting.h
 
