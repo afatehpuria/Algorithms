@@ -26,7 +26,7 @@ public:
      */
     sorting(float arr[]);
 
-    void BubbleSort();
+    void BubbleSort(int arr[], int len_arr);
 
     void PrintArray(int arr[], int len_arr);
 
