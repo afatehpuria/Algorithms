@@ -79,3 +79,19 @@ void sorting::BubbleSort(void)
         }
     }
 }
+
+void sorting::InsertionSort(void)
+{
+    int HoleP, ValToInsert;
+
+    for(int i =1; i < len; i++){
+        HoleP = i;
+        ValToInsert = iarr[i];
+        while( HoleP > 0 && iarr[HoleP -1]> ValToInsert){
+            swap(HoleP-1,HoleP);
+            HoleP-=1;
+        }
+        iarr[HoleP]=ValToInsert;
+    }
+}
+

@@ -33,6 +33,8 @@ public:
 
     void BubbleSort(void);
 
+    void InsertionSort(void);
+
     void PrintArray(void);
 
     // void PrintArray(float arr[], int len_arr);
