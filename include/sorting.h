@@ -31,10 +31,21 @@ public:
      */
     // sorting(float arr[]);
 
+    /**
+    *\note the following three Sorting Algs have a O(n^2)
+    *
+    */
+
     void BubbleSort(void);
 
     void InsertionSort(void);
 
+    void SelectionSort(void);
+
+    /**
+    *\note PrintArray is an helper function used to print the array
+    *
+    */
     void PrintArray(void);
 
     // void PrintArray(float arr[], int len_arr);
@@ -42,7 +53,12 @@ public:
 
 private:
 
-    void swap(uint a, uint b);
+	/**
+	*\note swap is an helper function used to swap 2 elements of an array
+	*@param uint a index of the first element to be swapped
+	*@param unit b index of the 2nd element to be swapped
+	*/
+	void swap(uint a, uint b);
 
     // void swap(float *a, float *b);
 

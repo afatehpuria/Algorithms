@@ -85,13 +85,32 @@ void sorting::InsertionSort(void)
     int HoleP, ValToInsert;
 
     for(int i =1; i < len; i++){
+        //Select Val to be inserted and set its position as the 
+        //position of the hole
         HoleP = i;
         ValToInsert = iarr[i];
+
+        //Move the Val to its correct postion in sorted list
         while( HoleP > 0 && iarr[HoleP -1]> ValToInsert){
             swap(HoleP-1,HoleP);
             HoleP-=1;
         }
-        iarr[HoleP]=ValToInsert;
+    }
+}
+
+void sorting::SelectionSort(void)
+{
+    int IndexOfMin;
+    for(int i =0; i<(len-1); i++){
+        IndexOfMin = i;
+        for(int j = i+1; j<len; j++){
+            if(iarr[j] < iarr[IndexOfMin]){
+                IndexOfMin = j;
+            }
+        }
+        if(IndexOfMin!=i){
+            swap(IndexOfMin,i);
+        }
     }
 }
 
