@@ -4,6 +4,7 @@
 
 #include "../include/sorting.h"
 
+using namespace std;
 
 sorting::sorting(int* pArr, uint nLen)
     : iarr(0x0),
@@ -112,5 +113,64 @@ void sorting::SelectionSort(void)
             swap(IndexOfMin,i);
         }
     }
+}
+
+std::vector<int> sorting::MergeSort(std::vector<int> arr){
+    int LengthArr = arr.size();
+    std::vector<int> arr1;
+    std::vector<int> arr2;
+
+    if(LengthArr==1){
+        return arr;
+    }
+    else{
+        uint LengthArr1 = (LengthArr/2);
+        for(int i=0; i<=LengthArr1-1; i++){
+            arr1.push_back(arr[i]);
+        }
+        for(int j=LengthArr1; j<=LengthArr-1; j++){
+            arr2.push_back(arr[j]);
+        }
+        return merge(MergeSort(arr1), MergeSort(arr2));
+    }
+}
+
+
+
+std::vector<int> sorting::merge(std::vector<int> v1, std::vector<int> v2){
+    std::vector<int> v;
+    while(v1.size()!=0 && v2.size()!=0){
+        if(v1.front() < v2.front()) {
+            v.push_back( v1.front() );
+            v1.erase(v1.begin());
+        }
+        else{
+            v.push_back(v2.front());
+            v2.erase(v2.begin());
+        }
+    }
+
+    while(v1.size()!=0){
+        v.push_back(v1.front());
+        v1.erase(v1.begin());
+    }
+
+    while(v2.size()!=0){
+        v.push_back(v2.front());
+        v2.erase(v2.begin());
+    }
+
+    vector<int>::iterator iter;
+    uint counter = 0x0;
+    for (iter = v.begin(); iter != v.end(); iter++) {
+      iarr[counter] = *iter;
+      counter++;
+    }
+
+    //    for (counter = 0x0; counter < len; counter++) {
+    //  iarr[counter] = v[counter];
+    // }
+    // iarr = &v[0];
+    return v;
 }
 

@@ -1,16 +1,20 @@
+RM := /bin/rm
+CXX := /usr/bin/g++
+MKDIR := /bin/mkdir
+
 all: Deps MySortingProgram
 
 Deps:
-	mkdir -p obj
+	@${MKDIR} -p obj
 
 clean:
-	/bin/rm -f obj/*.o MySortingProgram
+	@${RM} -f obj/*.o MySortingProgram
 
 MySortingProgram: obj/main.o obj/sorting.o
-	g++ -o $@ $^
+	@${CXX} -o $@ $^
 
 obj/main.o: main.cpp
-	g++ -Wall -o $@ -c $<
+	@${CXX} -g -Wall -o $@ -c $<
 
 obj/sorting.o: src/sorting.cpp include/sorting.h
-	g++ -Wall -o $@ -c $<
+	@${CXX} -g -Wall -o $@ -c $<

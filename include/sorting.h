@@ -7,6 +7,10 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <vector>
+#include <math.h>
+
+using namespace std;
 
 typedef unsigned int uint;
 
@@ -42,6 +46,15 @@ public:
 
     void SelectionSort(void);
 
+
+    /**
+    *
+    *
+    */
+
+	std::vector<int> MergeSort(std::vector<int> arr);
+
+
     /**
     *\note PrintArray is an helper function used to print the array
     *
@@ -61,7 +74,12 @@ private:
 	void swap(uint a, uint b);
 
     // void swap(float *a, float *b);
+    std::vector<int> merge(std::vector<int> v1, std::vector<int> v2);
 
+private:
+
+    sorting(const sorting& rhs);
+    sorting& operator=(const sorting& rhs);
 
 };
 
