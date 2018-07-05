@@ -13,6 +13,7 @@
 using namespace std;
 
 typedef vector<int> VInt;
+typedef unsigned int uint;
 
 class multiplication {
 public:
