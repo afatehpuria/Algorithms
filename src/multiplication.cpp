@@ -7,45 +7,21 @@
 * This class only takes in vectors of equal length
 *
 **/
-multiplication::multiplication(std::vector<int> iArr, std::vector<int> jArr)
-	: xArr(0x0)
-	  yArr(0x0)
-
-{	
-	if (!iArr.empty()) {
-		len = iArr.size()
-		xArr = new std::vector<int> [len];
-		if (xArr != nullptr) {
-	    	for (uint i = 0x0; i < len; i++) {
-			xArr[i] = iArr[i];
-	    }
-	}
-    }
-
-    if (!jArr.empty()) {
-		len = jArr.size()
-		yArr = new std::vector<int> [len];
-		if (yArr != nullptr) {
-	    	for (uint i = 0x0; i < len; i++) {
-			yArr[i] = jArr[i];
-	    }
-	}
-    }
+multiplication::multiplication
+(
+    const VInt& iArr,
+    const VInt& jArr
+)
+{
+    xArr = iArr;
+    yArr = jArr;
 }
 
 multiplication::~multiplication(void)
 {
-    if (xArr != nullptr) {
-	delete [] xArr;
-	xArr = nullptr;
-    }
-    if (yArr != nullptr) {
-	delete [] yArr;
-	yArr = nullptr;
-    }
 }
 
-
+/*
 std::vector<int> RecursionMult(std::vector<int> arr1, std::vector<int> arr2){
 	std::vector<int> sol;
 	std::vector<int> temp1;
@@ -65,4 +41,4 @@ std::vector<int> RecursionMult(std::vector<int> arr1, std::vector<int> arr2){
 	}
 	return sol
 }
-
+*/

@@ -2,7 +2,7 @@
 // Created by Aman Fatehpuria on 7/03/18.
 //
 
-#ifndef ALGORITHMS_MULTIPLICATION _H
+#ifndef ALGORITHMS_MULTIPLICATION_H
 #define ALGORITHMS_MULTIPLICATION_H
 
 #include <iostream>
@@ -12,25 +12,19 @@
 
 using namespace std;
 
-typedef unsigned int uint;
+typedef vector<int> VInt;
 
 class multiplication {
 public:
 
-	std::vector<int> xArr;
-	std::vector<int> yArr;
+    VInt xArr;
+    VInt yArr;
 
-	multiplication(std::vector<int> iArr, std::vector<int> jArr);
+    multiplication(const VInt& iArr, const VInt& jArr);
+    
+    ~multiplication(void);
 
-	~multiplication(void);
-
-	std::vector<int> RecursionMult(void);
-
-
-
-
-
-
+    // std::vector<int> RecursionMult(void);
 
 private:
 
