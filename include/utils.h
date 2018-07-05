@@ -16,6 +16,9 @@ typedef unsigned int uint;
 
 class utils {
 public:
+	utils(void);
+	~utils(void);
+	VInt IntToVector(int i)
 
 
 
