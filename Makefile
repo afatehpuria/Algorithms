@@ -2,13 +2,22 @@ RM := /bin/rm
 CXX := /usr/bin/g++
 MKDIR := /bin/mkdir
 
-all: Deps MySortingProgram
+all: Deps MySortingProgram Multiply
 
 Deps:
 	@${MKDIR} -p obj
 
 clean:
-	@${RM} -f obj/*.o MySortingProgram
+	@${RM} -f obj/*.o MySortingProgram Multiply
+
+Multiply: obj/MultiplyMain.o obj/multiplication.o
+	@${CXX} -o $@ $^
+
+obj/MultiplyMain.o: MultiplyMain.cpp
+	@${CXX} -g -Wall -o $@ -c $<
+
+obj/multiplication.o: src/multiplication.cpp include/multiplication.h
+	@${CXX} -g -Wall -o $@ -c $<
 
 MySortingProgram: obj/main.o obj/sorting.o
 	@${CXX} -o $@ $^
