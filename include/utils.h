@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <vector>
 #include <math.h>
+#include <stdlib.h>
 
 using namespace std;
 

@@ -7,11 +7,7 @@
 * This class only takes in vectors of equal length
 *
 **/
-multiplication::multiplication
-(
-    const VInt& iArr,
-    const VInt& jArr
-)
+multiplication::multiplication(const VInt& iArr, const VInt& jArr)
 {
     xArr = iArr;
     yArr = jArr;
