@@ -19,7 +19,8 @@ class utils {
 public:
 	utils(void);
 	~utils(void);
-	VInt IntToVector(int i)
+	VInt IntToVector(int i);
+	void PrintVect(VInt v);
 
 
 
