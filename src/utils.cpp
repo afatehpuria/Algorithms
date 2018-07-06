@@ -7,20 +7,31 @@
 utils::utils(void){}
 utils::~utils(void){}
 
-VInt utils::IntToVector(int i){
+VInt utils::IntToVector(int x){
 	VInt v;
-	div_t q = div(x, 10);
 
-    if (q.quot){
-        IntToVector(q.quot);
-    }
-    v.push_back();
+	if (x==0){
+		v.push_back(0);
+	}
+	while(x>0){
+		v.push_back(x%10);
+		x /=10;
+	}
+	reverse(v.begin(),v.end());
+	// div_t q = div(x, 10);
+
+ //    if (q.quot)
+ //        IntToVector(q.quot);
+	// // cout<<q.rem<<" ";
+ //    v.push_back(q.rem);
+    
+    return v;
 }
 
 void utils::PrintVect(VInt v){
-	len = v.size();
-	for(uint i =0; i<len; i++){
-		cout << v[i] << " ";
+	uint len = v.size();
+	for(int i =0; i<v.size(); i++){
+		cout << v[i]<<" ";
 	}
 }
 

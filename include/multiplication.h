@@ -10,6 +10,7 @@
 #include <vector>
 #include <math.h>
 
+
 using namespace std;
 
 typedef vector<int> VInt;
@@ -24,6 +25,7 @@ public:
     multiplication(const VInt& iArr, const VInt& jArr);
     
     ~multiplication(void);
+    VInt RecursionMult(VInt arr1, VInt arr2);
 
     // std::vector<int> RecursionMult(void);
 

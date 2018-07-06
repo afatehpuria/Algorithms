@@ -9,6 +9,7 @@
 #include <vector>
 #include <math.h>
 #include <stdlib.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -21,6 +22,7 @@ public:
 	~utils(void);
 	VInt IntToVector(int i);
 	void PrintVect(VInt v);
+	int VectorToInt(VInt v);
 
 
 
